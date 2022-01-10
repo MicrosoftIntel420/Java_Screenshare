@@ -24,7 +24,7 @@ public class Server extends JFrame implements Node{
     public Server(int port) throws IOException {
         this.port = port;
         this.window = new JFrame();
-        this.inputBuffer = new ByteArrayOutputStream(300000);
+        this.inputBuffer = new ByteArrayOutputStream(500000);
         this.serverSocket = new ServerSocket(this.port);
         SwingUtilities.invokeLater(new Runnable(){
             public void run(){
@@ -67,13 +67,13 @@ public class Server extends JFrame implements Node{
         this.window.setLocationRelativeTo(null);
 
         try {
-            BufferedImage image = ImageIO.read(new File("lmao.jpeg"));
+            BufferedImage image = null;
             this.screen = new DrawingPanel(image);
             this.window.add(this.screen);
             this.window.pack();
             this.window.setVisible(true);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
