@@ -11,4 +11,3 @@ java -jar -c -a \<ip\> -p \<port\>
 
 I used TCP because my marihuana consumption fucked up my brain so badly, that I haven't been able to implement it in UDP.
 (Would be nice when someone could explain this to me!)
-Cancel changes
